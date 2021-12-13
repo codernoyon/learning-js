@@ -1,20 +1,8 @@
-const btn = document.querySelector('#btn');
+const btn = document.getElementById('btn');
+const paragrph = document.getElementById('paragraph');
 
-btn.onclick = function myMove() {
-    const animateBox = document.getElementById('animate_box');
-    let position = 0;
-    
-    const interval = setInterval(frame, 5);
+btn.addEventListener('click', showSomthing);
 
-    function frame() {
-        if (position < 250) {
-
-            position++;
-            animateBox.style.top = position + 'px';
-            animateBox.style.left = position + 'px';
-        } else {
-            clearInterval(interval);
-        }
-    }
-
+function showSomthing() {
+    paragrph.innerHTML = "The button is clicked";
 }
